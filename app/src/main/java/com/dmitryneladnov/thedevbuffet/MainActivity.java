@@ -24,8 +24,16 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 Intent startersActivityIntent = new Intent(MainActivity.this, StartersActivity.class);
-
                 startActivity(startersActivityIntent);
+            }
+        });
+
+        mainsCard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent mainCoursesActivityIntent = new Intent(MainActivity.this, MainCoursesActivity.class);
+                startActivity(mainCoursesActivityIntent);
             }
         });
     }
