@@ -3,6 +3,7 @@ package com.dmitryneladnov.thedevbuffet;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 public class StartersActivity extends AppCompatActivity {
@@ -40,6 +41,10 @@ public class StartersActivity extends AppCompatActivity {
                 "Peppercorn and crab gyoza",
                 "Aubergine and salmon uramaki"
         };
+
+        ArrayAdapter<String> dishesAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, starterDishes);
+
+        startersList.setAdapter(dishesAdapter);
 
     }
 }
