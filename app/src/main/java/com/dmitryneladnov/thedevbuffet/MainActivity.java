@@ -4,8 +4,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -22,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
         startersCard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                // Explicit Intent
                 Intent startersActivityIntent = new Intent(MainActivity.this, StartersActivity.class);
                 startActivity(startersActivityIntent);
             }
@@ -31,9 +33,20 @@ public class MainActivity extends AppCompatActivity {
         mainsCard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                // Explicit Intent
                 Intent mainCoursesActivityIntent = new Intent(MainActivity.this, MainCoursesActivity.class);
                 startActivity(mainCoursesActivityIntent);
+            }
+        });
+
+        TextView emailTextView = findViewById(R.id.text_view_email_address);
+        emailTextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Implicit Intent
+                Intent launchEmailAppIntent = new Intent(Intent.ACTION_SENDTO);
+                launchEmailAppIntent.setData(Uri.parse("mailto:thedevbuffet@dmitryneladnov.com"));
+                startActivity(launchEmailAppIntent);
             }
         });
     }
