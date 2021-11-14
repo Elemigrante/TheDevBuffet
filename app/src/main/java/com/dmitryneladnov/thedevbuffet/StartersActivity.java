@@ -14,6 +14,10 @@ public class StartersActivity extends AppCompatActivity {
 
         ListView startersList = findViewById(R.id.list_view_starters);
 
+        Dish dish1 = new Dish("Spinach and cheese wontons",
+                "Thin wonton cases stuffed with fresh spinach and horseradish",
+                999);
+
         String[] starterDishes = {
                 "Spinach and cheese wontons",
                 "Spinach and pesto gyoza",
