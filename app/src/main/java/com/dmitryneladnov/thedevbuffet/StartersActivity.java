@@ -15,34 +15,20 @@ public class StartersActivity extends AppCompatActivity {
 
         ListView startersList = findViewById(R.id.list_view_starters);
 
-        Dish dish1 = new Dish("Spinach and cheese wontons",
-                "Thin wonton cases stuffed with fresh spinach and horseradish",
-                999);
-
-        String[] starterDishes = {
-                "Spinach and cheese wontons",
-                "Spinach and pesto gyoza",
-                "Thyme and pesto soup",
-                "Chilli and persimmon dumplings",
-                "Parsley and squid soup",
-                "Pineapple and orange soup",
-                "Ricotta and pheasant gyoza",
-                "Pancetta and cannellini soup",
-                "Cheese and squash gyoza",
-                "Stilton and trout soup",
-                "Trout and leek parcels",
-                "Rabbit and beetroot soup",
-                "Ricotta and horseradish wontons",
-                "Cabbage and sausage soup",
-                "Garam masala and pigeon parcels",
-                "Cardamom and fennel soup",
-                "Leek and chicken wontons",
-                "Trout and sausage wontons",
-                "Peppercorn and crab gyoza",
-                "Aubergine and salmon uramaki"
+        Dish[] starterDishes = {
+                new Dish("Salmon and fish dumplings", "Thin pastry cases stuffed with freshly-caught salmon and fish", 999),
+                new Dish("Feta and rosemary dumplings", "Thin pastry cases stuffed with tangy feta and fresh rosemary", 1148),
+                new Dish("Aubergine and sweetcorn dumplings", "Thin pastry cases stuffed with salted aubergine and creamed sweetcorn", 545),
+                new Dish("Ginger and tofu soup", "Fresh ginger and marinaded tofu combined into creamy soup", 625),
+                new Dish("Tomatillo and broccoli soup", "Fresh tomatillo and broccoli combined into chunky soup", 1056),
+                new Dish("Broccoli and cucumber soup", "Fresh broccoli and cucumber combined into creamy soup", 899),
+                new Dish("Chilli and aubergine dip", "A dip made from scotch bonnet chilli and fresh aubergine", 799),
+                new Dish("Chickpea and chilli gyoza", "Thin pastry cases stuffed with fresh chickpea and green chilli", 699),
+                new Dish("Sprout and pineapple soup", "Fresh sprout and pineapple combined into creamy soup", 599),
+                new Dish("Egusi and borscht soup", "Egusi and borscht combined into creamy soup", 1299)
         };
 
-        ArrayAdapter<String> dishesAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, starterDishes);
+        ArrayAdapter<Dish> dishesAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, starterDishes);
 
         startersList.setAdapter(dishesAdapter);
 
