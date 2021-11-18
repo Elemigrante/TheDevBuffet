@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         startersCard = findViewById(R.id.card_view_starters);
         mainsCard = findViewById(R.id.card_view_main_courses);
-        dessertsCard = findViewById(R.id.card_view_deserts);
+        dessertsCard = findViewById(R.id.card_view_desserts);
 
         startersCard.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
         dessertsCard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent dessertsActivityIntent = new Intent(MainActivity.this, DesertsActivity.class);
+                Intent dessertsActivityIntent = new Intent(MainActivity.this, DessertsActivity.class);
                 startActivity(dessertsActivityIntent);
             }
         });

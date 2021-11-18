@@ -10,9 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TheDevBuffet">
         <activity
-            android:name=".DesertsActivity"
+            android:name=".DessertsActivity"
             android:exported="false"
-            android:label="Deserts"
+            android:label="Desserts"
             android:parentActivityName=".MainActivity" />
         <activity
             android:name=".StartersActivity"
