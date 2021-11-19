@@ -20,6 +20,6 @@ public class Dish {
     @NonNull
     @Override
     public String toString() {
-        return String.format("Dish{title='%s', description='%s', price=%d}", title, description, price);
+        return String.format("%s\n%s\n%d", title, description, price);
     }
 }
